@@ -1,8 +1,10 @@
 #include <stdio.h>
-#include<conio.h>
-void main() 
-{
+#include <conio.h>  // Needed for getch()
+
+void main() {
     int numb, rev = 0, remain, original;
+
+    clrscr();  // Clears the screen (specific to Turbo C)
 
     printf("Enter a number: ");
     scanf("%d", &numb);
@@ -15,9 +17,11 @@ void main()
         numb = numb / 10;
     }
 
-    if (original == rev) { // Compare with the original number
+    if (original == rev) { 
         printf("Palindrome");
     } else {
         printf("Not a palindrome");
     }
+
+    getch();  // Waits for a key press before exiting
 }
